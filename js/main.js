@@ -228,5 +228,8 @@
 		counterWayPoint();
 	});
 
-
+	document.addEventListener("click", function () {
+		const audio = document.getElementById("background-audio");
+		audio.play();
+	  }, { once: true }); // Chỉ chạy một lần
 }());
