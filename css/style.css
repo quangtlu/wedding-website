@@ -1875,7 +1875,7 @@ body{background:#333}
 
 .snowflake
 {
-  color: yellow;
+  color: yellow !important;
   position: fixed;
   top: -10%;
   z-index: 9999;
