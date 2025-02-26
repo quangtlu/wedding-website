@@ -1966,3 +1966,7 @@ body{background:#333}
   animation-delay: 3s, 1.5s
 }
 
+.fb-comments, .fb-comments iframe {
+  max-width: 100% !important;
+  width: 100% !important;
+}

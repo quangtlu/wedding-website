@@ -59,7 +59,8 @@
 
 	</head>
 	<body>
-	
+		<div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0&appId=656542826756299"></script>
 	<div class="snowflakes" aria-hidden="true">
 		<div class="snowflake" style="font-size: 30px;">✿</div>
 		<div class="snowflake">✿</div>
@@ -86,10 +87,10 @@
 						<li class="active"><a href="#le-thanh-hon">Lễ thành hôn</a></li>
 						<li class="active"><a href="#fh5co-gallery">Album</a></li>
 						<li class="active"><a href="#mung-cuoi">Mừng cưới</a></li>
+						<li class="active"><a href="#loi-chuc">Gửi lời chúc</a></li>
 					</ul>
 				</div>
 			</div>
-			
 		</div>
 	</nav>
 
@@ -109,7 +110,6 @@
 							<div class="flipTimebox">
 								<div class="clock clock-fix"></div>
 							  </div>
-							<p><a href="#fh5co-event" class="btn btn-default btn-sm">Save our date</a></p>
 						</div>
 					</div>
 				</div>
@@ -273,11 +273,26 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="fh5co-event" class="fh5co-bg" style="height: unset; z-index: 10;">
+		<div class="overlay"></div>
 		<div class="container">
-			<div id="fb-root"></div>
-			<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0&appId=656542826756299"></script>
-			<div class="fb-comments" data-href="https://quangtlu.github.io/wedding-website" data-width="100%" data-numposts="5"></div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2 id="loi-chuc">Gửi lời chúc phúc</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div style="max-width: 100%; overflow: hidden;">
+					<div class="fb-comments"
+						 data-href="https://quangtlu.github.io/wedding-website"
+						 data-width="100%"
+						 data-numposts="5">
+					</div>
+				</div>
+			</div>
 		</div>
+		
 	</div>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
