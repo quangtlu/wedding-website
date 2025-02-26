@@ -228,5 +228,11 @@
 		counterWayPoint();
 	});
 
-
+	function playMusic() {
+		const audio = document.getElementById("background-audio");
+		audio.play().catch(error => console.log("Không thể tự động phát nhạc:", error));
+	  }
+	
+	document.addEventListener("touchstart", playMusic, { once: true });
+	document.addEventListener("click", playMusic, { once: true });
 }());
