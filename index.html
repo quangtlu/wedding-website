@@ -217,28 +217,7 @@
 			</div>
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
-					<ul id="fh5co-gallery-list">
-						
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url('images/album/image (3).jpg'); background-size: cover; "> 
-						<a href="images/album/image (3).jpg">
-							<div class="case-studies-summary">
-							</div>
-						</a>
-					</li>
-
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url('images/album/image (10).jpg'); background-size: cover; "> 
-						<a href="images/album/image (10).jpg">
-							<div class="case-studies-summary">
-							</div>
-						</a>
-					</li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url('images/album/image (12).jpg'); background-size: cover; "> 
-						<a href="images/album/image (13).jpg">
-							<div class="case-studies-summary">
-							</div>
-						</a>
-					</li>
-					
+					<ul id="fh5co-gallery-list">					
 					</ul>		
 				</div>
 			</div>
@@ -331,6 +310,26 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<script>
+		const imageList = document.getElementById("fh5co-gallery-list");
+			function getRandomImages(total, count) {
+			let numbers = Array.from({ length: total }, (_, i) => i + 1); // Tạo mảng [1, 2, ..., 14]
+			numbers = numbers.sort(() => Math.random() - 0.5).slice(0, count); // Xáo trộn và lấy 4 số đầu
+			return numbers;
+		}
 
+		const randomImages = getRandomImages(14,3); // Chọn ngẫu nhiên 4 ảnh
+
+		randomImages.forEach(num => {
+			imageList.innerHTML += `
+				<li class="one-third animate-box" data-animate-effect="fadeIn" 
+					style="background-image: url('images/album/image (${num}).jpg'); background-size: cover;">
+					<a href="images/album/image (${num}).jpg">
+						<div class="case-studies-summary"></div>
+					</a>
+				</li>
+			`;
+		});
+	</script>
 	</body>
 </html>
